@@ -3,7 +3,7 @@ import {InsertUser} from "../services/cadUsuarioServ.js"
 
 class CadUsuario {
 
-async Execute (request, response){
+async execute (request, response){
     
     const {
         nome,
@@ -37,7 +37,7 @@ async Execute (request, response){
         return response.status(400).json({erro:"Erro no eAdm"})
     }
 
-    const cadUser = new InsertUser().insert({
+    const cadUser = await new InsertUser().insert({
         nome,
         email,
         login,
