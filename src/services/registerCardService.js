@@ -6,7 +6,7 @@ class InsertCard{
     async insert(card) {
         card.id = randomUUID()
         card.status = true;
-        const resultCard = await conn("Chamados").insert(card);
+        const resultCard = await conn("Cards").insert(card);
         
         return resultCard;        
     }
