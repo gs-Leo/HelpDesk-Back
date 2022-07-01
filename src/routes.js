@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { RegisterCard } from "./Controle/registerCard.js";
-import { RegisterUser } from "./Controle/registerUser.js";
+import { RegisterCard } from "./controller/registerCard.js";
+import { RegisterUser } from "./controller/registerUser.js";
 
 const Routes = Router();
 

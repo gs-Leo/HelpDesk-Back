@@ -1,5 +1,5 @@
 import {randomUUID} from "crypto";
-import { conn } from "../dataBase/Conection.js";
+import { conn } from "../dataBase/conection.js";
 
 class InsertUser{
     
