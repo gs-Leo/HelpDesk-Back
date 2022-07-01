@@ -1,5 +1,5 @@
 import express from "express";
-import { InsertChamado } from "../services/registerCardService.js"
+import { InsertCard } from "../services/registerCardService.js"
 
 class RegisterCard {
 

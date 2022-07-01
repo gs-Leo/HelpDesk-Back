@@ -4,10 +4,10 @@ import { RegisterUser } from "./Controle/registerUser.js";
 
 const Routes = Router();
 
-rotas.post("/RegisterUsers", 
+Routes.post("/RegisterUsers", 
     new RegisterUser().execute
 );
-rotas.post("/RegisterCards", 
+Routes.post("/RegisterCards", 
     new RegisterCard().execute
 );
 
