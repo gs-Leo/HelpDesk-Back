@@ -33,9 +33,6 @@ async execute (request, response){
     if (!turno) {
         return response.status(400).json({erro:"Erro! Insira um turno de trabalho"})
     }
-    if (!eAdm) {
-        return response.status(400).json({erro:"Erro! informe se o usuário é Admin"})
-    }
 
     const newUser = await new InsertUser().insert({
         nome,
