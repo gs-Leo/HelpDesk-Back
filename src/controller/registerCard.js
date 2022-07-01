@@ -22,13 +22,18 @@ class RegisterCard {
         }
 
 
-        const newCard = await new InsertCard().insert({
-        solicitante,
-        categoria,
-        descricao
-        });
-        return response.status(201).json(newCard);
-    }
+        try {
+            const newCard = await new InsertCard().insert({
+                solicitante,
+                categoria,
+                descricao
+            });
+            return response.status(201).json(newCard);
+        } catch (error) {
+            return response.status(400).json(error.message);
+        }
 
+
+    }
 }
-export {RegisterCard};
+export { RegisterCard }; 
