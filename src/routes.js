@@ -1,14 +1,14 @@
 import { Router } from "express";
-import { CadChamado } from "./Controle/cadChamado.js";
-import { CadUsuario } from "./Controle/cadUsuario.js";
+import { RegisterCard } from "./Controle/registerCard.js";
+import { RegisterUser } from "./Controle/registerUser.js";
 
-const rotas = Router();
+const Routes = Router();
 
-rotas.post("/cadUsers", 
-    new CadUsuario().execute
+rotas.post("/RegisterUsers", 
+    new RegisterUser().execute
 );
-rotas.post("/cadChamados", 
-    new CadChamado().execute
+rotas.post("/RegisterCards", 
+    new RegisterCard().execute
 );
 
-export {rotas};
+export {Routes};
