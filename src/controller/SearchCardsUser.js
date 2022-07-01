@@ -8,8 +8,13 @@ class SearchCardsUser {
         try {
             const {user} = request.query;
 
-            const selectCard = await new SelectCardsUser().index(user);
-            return response.status(200).json(selectCard);
+            const selectCard = await new SelectCardsUser().index(user);            
+            
+            selectCard.length <1 ? response.status(200).json({error: "Mensagem"}) :
+            response.status(200).json(selectCard);
+            
+            return;
+
         } catch (error) {
             return response.status(400).json(error.message);
         }
